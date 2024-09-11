@@ -1,0 +1,106 @@
+1->
+
+#include <iostream>
+#include<climits>
+using namespace std;
+
+int main() {
+    int n = 3;
+    int m = 3;
+    int arr[n][m] = {{1,2,3}, {4,5,6}, {7,8,9}};
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            if(i%2 == 0 && j == m/2|| i%2 != 0 && j != m/2) cout<<"  ";
+            else cout<<arr[i][j]<<" ";
+            
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+2->
+
+#include <iostream>
+#include<climits>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    int n = 4;
+    int m = 4;
+    int arr[n][m] = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}};
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m-1; j++){
+            cout<<arr[j][i]<<" ";
+            
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+        int z = 0;
+        int x = 0, y = n-1;
+        while(z != n && x < y){
+            
+            for(int a = 0; a < m; a++){
+                swap(arr[a][x], arr[a][y]);
+            }
+            z++;
+            x++;
+            y--;
+        }
+    
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m-1; j++){
+            cout<<arr[j][i]<<" ";
+            
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+3->
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<climits>
+#include<algorithm>
+using namespace std;
+
+int main() {
+    int n = 3;
+    int m = 3;
+    int arr[n][m] = {{1,2,3}, {4,5,6}, {7,8,9}};
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cout<<arr[i][j]<<" ";
+            
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    
+    for(int i = 0; i < n; i++){
+        if(i%2 == 0){
+            for(int j = m-1; j >= 0; j--){
+            cout<<arr[j][i]<<" ";
+            
+        }
+        }
+        else {
+            for(int j = 0; j < m; j++){
+            cout<<arr[j][i]<<" ";
+            
+        }
+        }
+        
+    }
+    return 0;
+}
+
+4->
+
+	i am not still perfect sir
+5->
+	1 2 3 4
